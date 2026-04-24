@@ -102,7 +102,7 @@
         </div>
 
         <div class="pitch-body">
-          <p class="pitch-intro">Chase builds and ships your ideas</p>
+          <p class="pitch-intro">Chase builds and shapes your ideas</p>
           <p>My skillsets include Object-oriented programming and python. Currently taking a Solidity course.</p>
           <p>Chase doesn't have a CLI. Only a terminal emulator on Android.</p><br>
 
@@ -492,6 +492,13 @@
 
     .btn-github svg,
     .btn-x svg { flex-shrink: 0; }
+
+    /* X button in pitch — glowy like the Pitch button */
+    .contact-area .btn-x {
+      border-color: var(--accent);
+      color       : var(--accent);
+      box-shadow  : 0 0 0 2px var(--accent-dim), 0 0 22px var(--accent-glow);
+    }
 
     /* ────────────────────────────────────
        PITCH
