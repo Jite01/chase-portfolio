@@ -1,0 +1,629 @@
+---
+// src/pages/index.astro
+// Chase — Builder · Developer · Product
+// Mobile-first, static, CSS-only animations, inline JS
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chase — Builder, Developer, Product. Here's exactly why you need to hire me." />
+  <title>Chase — Builder</title>
+  <!--
+    FONTS: Loaded from Google Fonts at runtime (client-side).
+    Bebas Neue  → display headings
+    DM Mono     → body / UI text
+    Playfair Display Italic → "Here's Exactly why you need to hire me"
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Playfair+Display:ital@1&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       TOP BAR — theme toggle only
+  ══════════════════════════════════════ -->
+  <div class="topbar">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light / dark mode">
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+      </svg>
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       HEADER — anchor navigation
+  ══════════════════════════════════════ -->
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#pitch">Pitch</a>
+      <a href="#resume">Resume</a>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       MAIN
+  ══════════════════════════════════════ -->
+  <main>
+
+    <!-- ── HOME ─────────────────────────── -->
+    <section id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="home-content">
+        <!-- Name + role -->
+        <p class="hero-eyebrow">Chase</p>
+        <h1 class="hero-title">Builder</h1>
+
+        <!-- Cycling animated lines -->
+        <div class="cycle-wrapper" aria-label="Development · product · Here's Exactly why you need to hire me">
+          <span class="cycle-line cycle-1">Development</span>
+          <span class="cycle-line cycle-2">product</span>
+          <span class="cycle-line cycle-3 hire-line">Here's Exactly why you need to hire me</span>
+        </div>
+
+        <!-- CTA buttons -->
+        <div class="home-actions">
+          <a href="#pitch" class="btn btn-pitch" id="pitchBtn">Pitch</a>
+          <a
+            href="https://github.com/Jite01"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-github"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PITCH ─────────────────────────── -->
+    <section id="pitch">
+      <div class="pitch-content">
+        <div class="pitch-headline">
+          <h2>Better than a Claw Bot</h2>
+          <p class="pitch-sub">Half the price of a mac-mini</p>
+        </div>
+
+        <div class="pitch-body">
+          <p class="pitch-intro">Hi, I'm Chase</p>
+          <p>I work 16hrs a day. Constantly shipping and learning.</p>
+          <p>My skillsets include Object-oriented programming and python.</p>
+          <p>By the time you see this I will have completed a Solidity course.</p>
+          <p>I strain against the limits my environment. A mobile phone.</p>
+          <p>Hire Chase for the cost of a work station.</p>
+          <p>You won't need to install a soul or skill.md ;)</p>
+          <p>Send Chase a message on X with the button below!</p>
+        </div>
+
+        <div class="contact-area">
+          <a href="https://x.com/messages/compose?recipient_id=1873374936481300480" target="_blank" rel="noopener noreferrer" class="btn btn-x">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            X
+          </a>
+          <a href="mailto:jite0x@gmail.com" class="btn btn-email">jite0x@gmail.com</a>
+        </div>
+
+        <div class="available-row">
+          <span class="avail-dot" aria-hidden="true"></span>
+          <span>available</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RESUME ────────────────────────── -->
+    <section id="resume">
+      <div class="resume-content">
+        <h2 class="resume-title">Work &amp; Links</h2>
+        <p class="resume-sub">
+          Everything I've built lives somewhere public.<br />
+          Come find it.
+        </p>
+        <div class="resume-links">
+          <a
+            href="https://github.com/Jite01"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-github"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://x.com/chasexmeta" target="_blank" rel="noopener noreferrer" class="btn btn-x">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            X / Twitter
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       INLINE SCRIPT — theme toggle
+       Must use <script is:inline> so Astro
+       doesn't try to bundle / hoist it.
+  ══════════════════════════════════════ -->
+  <script is:inline>
+    (function () {
+      var html = document.documentElement;
+      var btn  = document.getElementById('themeToggle');
+
+      // Restore saved preference immediately (before paint)
+      var saved = localStorage.getItem('chase-theme');
+      if (saved === 'light' || saved === 'dark') {
+        html.setAttribute('data-theme', saved);
+      }
+
+      btn.addEventListener('click', function () {
+        var current = html.getAttribute('data-theme');
+        var next    = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('chase-theme', next);
+      });
+    })();
+  </script>
+
+  <!-- ══════════════════════════════════════
+       STYLES
+  ══════════════════════════════════════ -->
+  <style>
+
+    /* ────────────────────────────────────
+       RESET
+    ──────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ────────────────────────────────────
+       THEME TOKENS
+       Dark = default; Light = opt-in.
+
+       HERO IMAGES:
+       Replace the url() values below with
+       the direct image URLs from your imgur
+       albums. In imgur, open the album, then
+       right-click the image → "Copy image
+       address" to get the direct .jpg/.png URL.
+
+       Light mode hero: imgur.com/a/v1HWZxz
+       Dark  mode hero: imgur.com/a/xX28et1
+    ──────────────────────────────────── */
+
+    :root {
+      /* typography */
+      --f-display : 'Bebas Neue', sans-serif;
+      --f-mono    : 'DM Mono', monospace;
+      --f-hire    : 'Playfair Display', Georgia, serif;
+
+      /* dark defaults */
+      --bg          : #080808;
+      --bg-alt      : #0d0d0d;
+      --text        : #edeae3;
+      --text-muted  : #5a5650;
+      --accent      : #00ff88;
+      --accent-dim  : rgba(0, 255, 136, 0.18);
+      --accent-glow : rgba(0, 255, 136, 0.55);
+      --border      : #1c1c1c;
+
+      /* hero image — DARK MODE
+         Replace with direct image URL */
+      --hero-url    : url('https://i.imgur.com/AaPuOjV.jpeg');
+      --hero-opacity: 0.22;
+    }
+
+    [data-theme="light"] {
+      --bg          : #f0ebe0;
+      --bg-alt      : #e8e2d6;
+      --text        : #0c0a08;
+      --text-muted  : #8a8278;
+      --accent      : #c93a00;
+      --accent-dim  : rgba(201, 58, 0, 0.12);
+      --accent-glow : rgba(201, 58, 0, 0.45);
+      --border      : #d6d0c6;
+
+      /* hero image — LIGHT MODE
+         Replace with direct image URL */
+      --hero-url    : url('https://i.imgur.com/rSILMWZ.jpeg');
+      /* lighter opacity so warm-toned bg text stays readable */
+      --hero-opacity: 0.13;
+    }
+
+    /* ────────────────────────────────────
+       BASE
+    ──────────────────────────────────── */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background : var(--bg);
+      color      : var(--text);
+      font-family: var(--f-mono);
+      font-size  : 14px;
+      line-height: 1.6;
+      transition : background 0.35s ease, color 0.35s ease;
+      overflow-x : hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; }
+
+    /* ────────────────────────────────────
+       TOP BAR
+    ──────────────────────────────────── */
+    .topbar {
+      position  : fixed;
+      top       : 0;
+      right     : 0;
+      z-index   : 200;
+      padding   : 14px 18px;
+    }
+
+    .theme-toggle {
+      background    : none;
+      border        : 1px solid var(--border);
+      color         : var(--text-muted);
+      width         : 38px;
+      height        : 38px;
+      border-radius : 50%;
+      cursor        : pointer;
+      display       : flex;
+      align-items   : center;
+      justify-content: center;
+      transition    : border-color 0.2s, color 0.2s;
+    }
+    .theme-toggle:hover {
+      border-color: var(--accent);
+      color       : var(--accent);
+    }
+
+    /* Show moon in dark mode, sun in light mode */
+    .icon-sun  { display: none; }
+    .icon-moon { display: block; }
+    [data-theme="light"] .icon-sun  { display: block; }
+    [data-theme="light"] .icon-moon { display: none; }
+
+    /* ────────────────────────────────────
+       HEADER NAV
+    ──────────────────────────────────── */
+    header {
+      position   : fixed;
+      top        : 0;
+      left       : 0;
+      z-index    : 200;
+      padding    : 18px 22px;
+    }
+
+    nav {
+      display : flex;
+      gap     : 28px;
+    }
+
+    nav a {
+      font-family   : var(--f-mono);
+      font-size     : 10px;
+      font-weight   : 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color         : var(--text-muted);
+      transition    : color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* ────────────────────────────────────
+       SECTIONS — common
+    ──────────────────────────────────── */
+    section {
+      min-height : 100vh;
+      display    : flex;
+      align-items: center;
+      position   : relative;
+      padding    : 100px clamp(24px, 8vw, 80px) 72px;
+    }
+
+    /* ────────────────────────────────────
+       HOME
+    ──────────────────────────────────── */
+    #home {
+      align-items: flex-start;
+      overflow   : hidden;
+    }
+
+    /* Hero background image */
+    .hero-bg {
+      position          : absolute;
+      inset             : 0;
+      z-index           : 0;
+      background-image  : var(--hero-url);
+      background-size   : cover;
+      background-position: center top;
+      opacity           : var(--hero-opacity);
+      transition        : opacity 0.4s ease;
+      pointer-events    : none;
+    }
+
+    .home-content {
+      position  : relative;
+      z-index   : 1;
+      max-width : 540px;
+      width     : 100%;
+    }
+
+    .hero-eyebrow {
+      font-family   : var(--f-mono);
+      font-size     : 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color         : var(--accent);
+      margin-bottom : 6px;
+    }
+
+    .hero-title {
+      font-family  : var(--f-display);
+      font-size    : clamp(72px, 22vw, 130px);
+      line-height  : 0.88;
+      letter-spacing: -0.01em;
+      color        : var(--text);
+      margin-bottom: 32px;
+    }
+
+    /* ── Cycling text ───────────────────
+       3 lines, 9s total cycle.
+       Each line:
+         delay 0s / 3s / 6s
+         fade-in  → hold → fade-out
+    ──────────────────────────────────── */
+    .cycle-wrapper {
+      position     : relative;
+      height       : 52px;
+      margin-bottom: 40px;
+    }
+
+    .cycle-line {
+      position      : absolute;
+      inset-inline-start: 0;
+      top           : 0;
+      opacity       : 0;
+      font-family   : var(--f-mono);
+      font-size     : clamp(13px, 3.8vw, 16px);
+      letter-spacing: 0.05em;
+      color         : var(--text-muted);
+      white-space   : nowrap;
+    }
+
+    /* "Here's Exactly…" gets serotonin font */
+    .hire-line {
+      font-family   : var(--f-hire) !important;
+      font-style    : italic;
+      font-size     : clamp(17px, 5vw, 24px) !important;
+      letter-spacing: 0.01em !important;
+      color         : var(--accent) !important;
+    }
+
+    .cycle-1 { animation: lineShow 9s  0s infinite; }
+    .cycle-2 { animation: lineShow 9s  3s infinite; }
+    .cycle-3 { animation: lineShow 9s  6s infinite; }
+
+    @keyframes lineShow {
+      0%   { opacity: 0; transform: translateY(7px); }
+      7%   { opacity: 1; transform: translateY(0); }
+      27%  { opacity: 1; transform: translateY(0); }
+      34%  { opacity: 0; transform: translateY(-7px); }
+      100% { opacity: 0; }
+    }
+
+    /* ── Buttons ───────────────────────── */
+    .home-actions {
+      display  : flex;
+      gap      : 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display        : inline-flex;
+      align-items    : center;
+      gap            : 8px;
+      padding        : 11px 22px;
+      border         : 1px solid var(--border);
+      background     : transparent;
+      color          : var(--text);
+      font-family    : var(--f-mono);
+      font-size      : 11px;
+      letter-spacing : 0.1em;
+      text-transform : uppercase;
+      cursor         : pointer;
+      transition     : border-color 0.2s, color 0.2s, box-shadow 0.25s, background 0.2s;
+      white-space    : nowrap;
+    }
+    .btn:hover {
+      border-color: var(--accent);
+      color       : var(--accent);
+    }
+
+    /* Pitch button — always accent-bordered */
+    .btn-pitch {
+      border-color: var(--accent);
+      color       : var(--accent);
+    }
+
+    /*
+      Pitch glow synced to cycle-3.
+      cycle-3 starts at delay 6s inside a 9s loop.
+      Same keyframe percentages → perfect sync.
+    */
+    .btn-pitch {
+      animation: pitchGlow 9s 6s infinite;
+    }
+
+    @keyframes pitchGlow {
+      0%   { box-shadow: none; }
+      7%   { box-shadow: 0 0 0 2px var(--accent-dim), 0 0 22px var(--accent-glow); }
+      27%  { box-shadow: 0 0 0 2px var(--accent-dim), 0 0 22px var(--accent-glow); }
+      34%  { box-shadow: none; }
+      100% { box-shadow: none; }
+    }
+
+    .btn-github svg,
+    .btn-x svg { flex-shrink: 0; }
+
+    /* ────────────────────────────────────
+       PITCH
+    ──────────────────────────────────── */
+    #pitch {
+      background : var(--bg-alt);
+      align-items: flex-start;
+    }
+
+    .pitch-content {
+      max-width: 520px;
+      width    : 100%;
+    }
+
+    .pitch-headline h2 {
+      font-family  : var(--f-display);
+      font-size    : clamp(40px, 11vw, 68px);
+      line-height  : 0.95;
+      margin-bottom: 6px;
+    }
+
+    .pitch-sub {
+      font-family   : var(--f-mono);
+      font-size     : 12px;
+      letter-spacing: 0.1em;
+      color         : var(--accent);
+      margin-bottom : 40px;
+      text-transform: uppercase;
+    }
+
+    .pitch-body {
+      display       : flex;
+      flex-direction: column;
+      gap           : 12px;
+      margin-bottom : 44px;
+      border-left   : 2px solid var(--border);
+      padding-left  : 20px;
+    }
+
+    .pitch-body p {
+      font-size  : 14px;
+      line-height: 1.75;
+      color      : var(--text);
+    }
+
+    .pitch-intro {
+      font-size  : 18px !important;
+      font-weight: 500;
+      color      : var(--text) !important;
+      margin-bottom: 4px;
+    }
+
+    .contact-area {
+      display  : flex;
+      gap      : 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .btn-email {
+      font-size     : 11px;
+      letter-spacing: 0.03em;
+      text-transform: none;
+    }
+
+    .available-row {
+      display    : flex;
+      align-items: center;
+      gap        : 10px;
+      font-size  : 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color      : var(--text-muted);
+    }
+
+    /* Glowing green dot */
+    .avail-dot {
+      width        : 8px;
+      height       : 8px;
+      border-radius: 50%;
+      background   : #00cc55;
+      flex-shrink  : 0;
+      animation    : dotPulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes dotPulse {
+      0%   { box-shadow: 0 0 0 0 rgba(0, 204, 85, 0.55); }
+      70%  { box-shadow: 0 0 0 7px rgba(0, 204, 85, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 204, 85, 0); }
+    }
+
+    /* ────────────────────────────────────
+       RESUME
+    ──────────────────────────────────── */
+    #resume {
+      align-items: flex-start;
+    }
+
+    .resume-content {
+      max-width: 440px;
+    }
+
+    .resume-title {
+      font-family  : var(--f-display);
+      font-size    : clamp(48px, 14vw, 88px);
+      line-height  : 0.9;
+      margin-bottom: 20px;
+    }
+
+    .resume-sub {
+      font-size     : 13px;
+      line-height   : 1.8;
+      color         : var(--text-muted);
+      margin-bottom : 40px;
+    }
+
+    .resume-links {
+      display  : flex;
+      gap      : 12px;
+      flex-wrap: wrap;
+    }
+
+    /* ────────────────────────────────────
+       SMALL MOBILE
+    ──────────────────────────────────── */
+    @media (max-width: 400px) {
+      .hero-title { font-size: 68px; }
+      .cycle-wrapper { height: 60px; }
+      .hire-line { white-space: normal; line-height: 1.3; }
+      nav { gap: 18px; }
+    }
+
+  </style>
+
+</body>
+</html>
