@@ -8,13 +8,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Chase — Builder, Developer, Product. Here's exactly why you need to hire me." />
+  <meta name="description" content="Chase — Builder, Developer, Product. Here's exactly why you need me on your team" />
   <title>Chase — Builder</title>
   <!--
     FONTS: Loaded from Google Fonts at runtime (client-side).
     Bebas Neue  → display headings
     DM Mono     → body / UI text
-    Playfair Display Italic → "Here's Exactly why you need to hire me"
+    Playfair Display Italic → "Here's Exactly why you need me on your team!"
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -72,7 +72,7 @@
         <div class="cycle-wrapper" aria-label="Development · product · Here's Exactly why you need to hire me">
           <span class="cycle-line cycle-1">Development</span>
           <span class="cycle-line cycle-2">product</span>
-          <span class="cycle-line cycle-3 hire-line">Here's Exactly why you need to hire me</span>
+          <span class="cycle-line cycle-3 hire-line">Here's why you Need me on your team!</span>
         </div>
 
         <!-- CTA buttons -->
@@ -102,13 +102,14 @@
         </div>
 
         <div class="pitch-body">
-          <p class="pitch-intro">Hi, I'm Chase</p>
-          <p>I work 16hrs a day. Constantly shipping and learning.</p>
-          <p>My skillsets include Object-oriented programming and python.</p>
-          <p>By the time you see this I will have completed a Solidity course.</p>
-          <p>I strain against the limits my environment. A mobile phone.</p>
-          <p>Hire Chase for the cost of a work station.</p>
-          <p>You won't need to install a soul or skill.md ;)</p>
+          <p class="pitch-intro">Chase builds and ships your ideas</p>
+          <p>My skillsets include Object-oriented programming and python. Currently taking a Solidity course.</p>
+          <p>Chase doesn't have a CLI. Only a terminal emulator on Android.</p><br>
+
+          <p>I would love to be your <span class="pd-role">PERSONAL DEVELOPER</span></p><br>
+          <p>Let's build your ideas for ONLY the cost of a PC!</p>
+          <p>No soul install required. No skill.md needed. ;)</p>
+
           <p>Send Chase a message on X with the button below!</p>
         </div>
 
@@ -251,7 +252,7 @@
          Replace with direct image URL */
       --hero-url    : url('https://i.imgur.com/drFX5Lp.jpeg');
       /* lighter opacity so warm-toned bg text stays readable */
-      --hero-opacity: 0.22;
+      --hero-opacity: 0.29;
     }
 
     /* ────────────────────────────────────
@@ -536,11 +537,29 @@
       color      : var(--text);
     }
 
+    /* ── CHANGE 1: serotonin font on pitch-intro ── */
     .pitch-intro {
-      font-size  : 18px !important;
-      font-weight: 500;
-      color      : var(--text) !important;
+      font-family  : var(--f-hire) !important;
+      font-style   : italic;
+      font-size    : clamp(18px, 5.5vw, 26px) !important;
+      color        : var(--accent) !important;
       margin-bottom: 4px;
+      line-height  : 1.3;
+    }
+
+    /* ── CHANGE 2: PERSONAL DEVELOPER treatment ──
+       Mono, all-caps, accent color, wide tracking,
+       slightly larger — sharp and loud without
+       touching the serotonin font.
+    ────────────────────────────────────────────── */
+    .pd-role {
+      font-family   : var(--f-mono);
+      font-size     : 1.15em;
+      font-weight   : 500;
+      letter-spacing: 0.2em;
+      color         : var(--accent);
+      border-bottom : 1px solid var(--accent);
+      padding-bottom: 1px;
     }
 
     .contact-area {
